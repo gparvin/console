@@ -1,5 +1,6 @@
 /* Copyright Contributors to the Open Cluster Management project */
 /* eslint-disable @typescript-eslint/no-var-requires */
+import { ConsoleRemotePlugin } from '@openshift-console/dynamic-plugin-sdk-webpack'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
@@ -57,6 +58,7 @@ module.exports = function (_env: any, argv: { hot?: boolean; mode: string | unde
             ],
         },
         plugins: [
+            new ConsoleRemotePlugin(),
             new webpack.DefinePlugin({
                 'process.env.NODE_ENV': isProduction ? JSON.stringify('production') : JSON.stringify('development'),
                 'process.env.REACT_APP_BACKEND_HOST': isProduction

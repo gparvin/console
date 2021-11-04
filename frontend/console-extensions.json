@@ -1,0 +1,27 @@
+[
+    {
+        "type": "console.navigation/section",
+        "properties": {
+            "id": "acm-section",
+            "perspective": "admin",
+            "name": "ACM"
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "id": "acm-credentials",
+            "perspective": "admin",
+            "section": "acm-section",
+            "name": "Credentials",
+            "href": "/example"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/example",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    }
+]
