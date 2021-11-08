@@ -8,7 +8,6 @@ import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin'
-import * as path from 'path'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
 import webpack from 'webpack'
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
@@ -18,6 +17,7 @@ module.exports = function (_env: any, argv: { hot?: boolean; mode: string | unde
     const isDevelopment = !isProduction
 
     const config: webpack.Configuration & { devServer: DevServerConfiguration } = {
+        entry: './src/routes/Credentials/Test.tsx',
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx'],
             fallback: {
@@ -83,14 +83,14 @@ module.exports = function (_env: any, argv: { hot?: boolean; mode: string | unde
                 ignoreOrder: false, // Enable to remove warnings about conflicting order
             }),
         ].filter(Boolean) as webpack.WebpackPluginInstance[],
-        output: {
-            assetModuleFilename: 'assets/[name].[contenthash:8][ext][query]',
-            filename: '[name].[contenthash:8].js',
-            chunkFilename: '[name].[contenthash:8].js',
-            publicPath: isProduction ? '/multicloud/' : '/',
-            path: path.resolve(__dirname, 'build'),
-            clean: true,
-        },
+        // output: {
+        //     assetModuleFilename: 'assets/[name].[contenthash:8][ext][query]',
+        //     filename: '[name].[contenthash:8].js',
+        //     chunkFilename: '[name].[contenthash:8].js',
+        //     publicPath: isProduction ? '/multicloud/' : '/',
+        //     path: path.resolve(__dirname, 'build'),
+        //     clean: true,
+        // },
         optimization: {
             //     runtimeChunk: 'single',
             //     splitChunks: {

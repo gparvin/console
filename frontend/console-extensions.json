@@ -1,22 +1,181 @@
 [
     {
+        "type": "console.perspective",
+        "properties": {
+            "id": "acm",
+            "name": "All clusters",
+            "icon": { "$codeRef": "perspective.icon" },
+            "landingPageURL": { "$codeRef": "perspective.getLandingPageURL" },
+            "importRedirectURL": { "$codeRef": "perspective.getImportRedirectURL" }
+        }
+    },
+    {
         "type": "console.navigation/section",
         "properties": {
-            "id": "acm-section",
-            "perspective": "admin",
-            "name": "ACM"
+            "perspective": "acm",
+            "id": "acm-home",
+            "name": "Home"
         }
     },
     {
         "type": "console.navigation/href",
         "properties": {
-            "id": "acm-credentials",
-            "perspective": "admin",
-            "section": "acm-section",
-            "name": "Credentials",
-            "href": "/example"
+            "perspective": "acm",
+            "section": "acm-home",
+            "id": "acm-welcome",
+            "name": "Welcome",
+            "href": "/acm/home/welcome"
         }
     },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/home/welcome",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "section": "acm-home",
+            "id": "acm-overview",
+            "name": "Overview",
+            "href": "/acm/home/overview"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/home/overview",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/section",
+        "properties": {
+            "id": "acm-infrastructure",
+            "perspective": "acm",
+            "name": "Infrastructure"
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "section": "acm-infrastructure",
+            "id": "acm-clusters",
+            "name": "Clusters",
+            "href": "/acm/infrastructure/clusters"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/infrastructure/clusters",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "section": "acm-infrastructure",
+            "id": "acm-bare-metal-assets",
+            "name": "Bare metal assets",
+            "href": "/acm/infrastructure/bare-metal-assets"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/infrastructure/bare-metal-assets",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "section": "acm-infrastructure",
+            "id": "acm-automation",
+            "name": "Automation",
+            "href": "/acm/infrastructure/automation"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/infrastructure/automation",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "section": "acm-infrastructure-environments",
+            "id": "acm-infra-envs",
+            "name": "Infrastructure environments",
+            "href": "/acm/infrastructure/environments"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/infrastructure/environments",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "id": "acm-applications",
+            "name": "Applications",
+            "href": "/acm/applications"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/applications",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "id": "acm-governance",
+            "name": "Governance",
+            "href": "/acm/governance"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/governance",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+    {
+        "type": "console.navigation/href",
+        "properties": {
+            "perspective": "acm",
+            "id": "acm-credentials",
+            "name": "Credentials",
+            "href": "/acm/credentials"
+        }
+    },
+    {
+        "type": "console.page/route",
+        "properties": {
+            "path": "/acm/credentials",
+            "component": { "$codeRef": "credentials.default" }
+        }
+    },
+
     {
         "type": "console.page/route",
         "properties": {

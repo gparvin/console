@@ -14,7 +14,8 @@
         "eslint:fix": "eslint src test --ext .ts --fix",
         "prettier": "prettier --check src public",
         "prettier:fix": "prettier --write src public",
-        "update": "npx npm-check-updates --doctor --upgrade && npm audit fix && npm dedup"
+        "update": "npx npm-check-updates --doctor --upgrade && npm audit fix && npm dedup",
+        "plugin": "npm run build && http-server ./dist -p 3000 -c-1 --cors"
     },
     "devDependencies": {
         "@apollo/client": "^3.4.16",
@@ -207,6 +208,7 @@
         "displayName": "ACM Plugin",
         "description": "Cluster management",
         "exposedModules": {
+            "perspective": "./src/perspective",
             "credentials": "./src/routes/Credentials/Test.tsx"
         },
         "dependencies": {
