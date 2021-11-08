@@ -209,7 +209,7 @@
         "description": "Cluster management",
         "exposedModules": {
             "perspective": "./src/perspective",
-            "credentials": "./src/routes/Credentials/Test.tsx"
+            "test": "./src/routes/Credentials/Test.tsx"
         },
         "dependencies": {
             "@console/pluginAPI": "*"

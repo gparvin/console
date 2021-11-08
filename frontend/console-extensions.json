@@ -31,7 +31,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/home/welcome",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -48,7 +48,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/home/overview",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -73,7 +73,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/clusters",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -90,7 +90,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/bare-metal-assets",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -107,15 +107,15 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/automation",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
         "type": "console.navigation/href",
         "properties": {
             "perspective": "acm",
-            "section": "acm-infrastructure-environments",
-            "id": "acm-infra-envs",
+            "section": "acm-infrastructure",
+            "id": "acm-infrastructure-environments",
             "name": "Infrastructure environments",
             "href": "/acm/infrastructure/environments"
         }
@@ -124,7 +124,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/infrastructure/environments",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -140,7 +140,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/applications",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -156,7 +156,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/governance",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     },
     {
@@ -172,15 +172,7 @@
         "type": "console.page/route",
         "properties": {
             "path": "/acm/credentials",
-            "component": { "$codeRef": "credentials.default" }
-        }
-    },
-
-    {
-        "type": "console.page/route",
-        "properties": {
-            "path": "/example",
-            "component": { "$codeRef": "credentials.default" }
+            "component": { "$codeRef": "test.default" }
         }
     }
 ]
